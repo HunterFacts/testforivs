@@ -2,10 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CalculationPerMonth;
 
-namespace CalculationPerMonthTest
+namespace CalculationPerMonthTests
 {
     [TestClass]
-    public class CalcTest
+    public class CalcTests
     {
         /// <summary>
         /// 
