@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculationPerMonth", "CalculationPerMonth\CalculationPerMonth.csproj", "{D62FFD19-EC25-4939-BD17-20C0FBE517D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{FDB9719C-BA83-4CB1-B3AA-F38B0D7CD5A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculationPerMonthTest", "UnitTestProject1\CalculationPerMonthTest.csproj", "{FDB9719C-BA83-4CB1-B3AA-F38B0D7CD5A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
