@@ -8,7 +8,7 @@ namespace CalculationPerMonthTests
     public class CalcTests
     {
         /// <summary>
-        /// 
+        /// Проверяет метод Calc.Calculation на правильность строки "Ваша цена за подписку составляет 4860,00руб. (Скидка 10%)"
         /// </summary>
         [TestMethod]
         public void AllMonthsTest()
@@ -19,11 +19,11 @@ namespace CalculationPerMonthTests
             int Price = 450;
             Calc use = new Calc();
             string answer = use.Calculation(Price, monthper, monthsub);
-            Console.WriteLine(answer);
+            Assert.AreEqual(answer, "Ваша цена за подписку составляет 4860,00руб. (Скидка 10%)");
         }
 
         /// <summary>
-        /// 
+        /// Проверяет метод Calc.Calculation на правильность строки "Ваша цена за подписку составляет 450,00руб. (Скидка 0%)"
         /// </summary>
         [TestMethod]
         public void OneMonthTest()
@@ -34,11 +34,11 @@ namespace CalculationPerMonthTests
             int Price = 450;
             Calc use = new Calc();
             string answer = use.Calculation(Price, monthper, monthsub);
-            Console.WriteLine(answer);
+            Assert.AreEqual(answer, "Ваша цена за подписку составляет 450,00руб. (Скидка 0%)");
         }
 
         /// <summary>
-        /// 
+        /// Проверяет метод Calc.Calculation на правильность строки "Ваша цена за подписку составляет 1350,00руб. (Скидка 0%)"
         /// </summary>
         [TestMethod]
         public void ThreeMonthTest()
@@ -49,11 +49,11 @@ namespace CalculationPerMonthTests
             int Price = 450;
             Calc use = new Calc();
             string answer = use.Calculation(Price, monthper, monthsub);
-            Console.WriteLine(answer);
+            Assert.AreEqual(answer, "Ваша цена за подписку составляет 1350,00руб. (Скидка 0%)");
         }
 
         /// <summary>
-        /// 
+        /// Проверяет метод Calc.Calculation на правильность строки "Ваша цена за подписку составляет 4702,50руб. (Скидка 5%)"
         /// </summary>
         [TestMethod]
         public void OneMonthAbuseTest()
@@ -64,11 +64,11 @@ namespace CalculationPerMonthTests
             int Price = 450;
             Calc use = new Calc();
             string answer = use.Calculation(Price, monthper, monthsub);
-            Console.WriteLine(answer);
+            Assert.AreEqual(answer, "Ваша цена за подписку составляет 4702,50руб. (Скидка 5%)");
         }
 
         /// <summary>
-        /// 
+        /// Проверяет метод Calc.Calculation на правильность строки "Ваша цена за подписку составляет 2250,00руб. (Скидка 0%)"
         /// </summary>
         [TestMethod]
         public void ThreeMonthAbuseTest()
@@ -79,7 +79,7 @@ namespace CalculationPerMonthTests
             int Price = 450;
             Calc use = new Calc();
             string answer = use.Calculation(Price, monthper, monthsub);
-            Console.WriteLine(answer);
+            Assert.AreEqual(answer, "Ваша цена за подписку составляет 2250,00руб. (Скидка 0%)");
         }
 
     }

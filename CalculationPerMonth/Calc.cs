@@ -9,12 +9,15 @@ namespace CalculationPerMonth
     public class Calc
     {
         /// <summary>
-        /// 
+        /// Возвращает цену за подписку с учетом скидки.
         /// </summary>
         /// <param name="price">Цена за подписку на 1 месяц.</param>
         /// <param name="monthsAbsence">Месяцы исключение.</param>
         /// <param name="monthssubscription">Месяцы подписки, выбранные пользователем.</param>
-        /// <returns>Возвращает цену за подписку с учетом скидки.</returns>
+        /// <returns>
+        /// Метод Returned, который возвращает: 
+        /// Строку формата "Ваша цена за подписку составляет {цена за подписку}руб. (Скидка {значение скидки}%)"
+        /// </returns>
         public string Calculation(int price, string[] monthsabsence, string[] monthssubscription)
         {
             bool check = false;
@@ -33,11 +36,11 @@ namespace CalculationPerMonth
            
         }
         /// <summary>
-        /// 
+        /// Возвращает цену за подписку с учетом скидки.
         /// </summary>
         /// <param name="discount">Количество месяцев для учета скидки</param>
         /// <param name="result">Сумма оплаты без учёта скидки</param>
-        /// <returns>Возвращает цену за подписку с учетом скидки.</returns>
+        /// <returns>Строка формата "Ваша цена за подписку составляет {цена за подписку}руб. (Скидка {значение скидки}%)"</returns>
         public string Returned (int discount, int result)
         {
             double res = result;
@@ -52,7 +55,7 @@ namespace CalculationPerMonth
                 dis = "5";
             }
             string answer = res.ToString("0.00");
-            return $"Ваша цена за подписку представляет {answer}руб. (Скидка {dis}%)";
+            return $"Ваша цена за подписку составляет {answer}руб. (Скидка {dis}%)";
         }
     }
 }
